@@ -48,6 +48,14 @@
     ?>
     <title><?$APPLICATION -> ShowTitle();?></title>
     <script src="//code.jivo.ru/widget/Mj3ayeDYPA" async></script>
+
+<script language="javascript" type="text/javascript"><!--
+var d = new Date();
+var month=new Array("января","февраля","марта","апреля","мая","июня",
+"июля","августа","сентября","октября","ноября","декабря");
+var TODAY = ("до " + d.getDate()+ " " + month[d.getMonth()]);
+//--></script>
+
 </head>
 <header>
     <div class="header__container">

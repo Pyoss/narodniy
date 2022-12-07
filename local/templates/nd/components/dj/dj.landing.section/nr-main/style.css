@@ -195,7 +195,7 @@
 
 @media (max-width: 1080px) {
     .main {
-        height: 245rem;
+        height: 254rem;
         background-size: cover;
         display: flex;
         margin-top: -26rem;
@@ -269,14 +269,14 @@
 
 
     .main__title-comment {
-        font-size: 4.4rem;
+        font-size: 5.4rem;
         font-weight: 600;
-        line-height: 5rem;
+        line-height: 5.5rem;
     }
 
     .main__title-name {
-        font-size: 7.7rem;
-        line-height: 9rem;
+        font-size: 8.5rem;
+        line-height: 12rem;
     }
 
     .main__features {

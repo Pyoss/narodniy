@@ -32,7 +32,12 @@
         </div>
         <div class="main__sale">
             <div class="main__sale-conditions">При заказе
-                <span class="main__sale-date">до 30 декабря</span>
+
+	        <span class="main__sale-date">
+            <script language="javascript" type="text/javascript">
+            document.write(TODAY);
+            </script>
+            </span>
                 <span class="main__sale-price">от <b><?=number_format($GLOBALS['price-20'], 0, '.', '&nbsp')?></b> р</span>
             </div>
             <a href="#order" class="main__sale-action">Заказать!</a>

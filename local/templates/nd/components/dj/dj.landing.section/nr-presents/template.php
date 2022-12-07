@@ -28,7 +28,7 @@
             <img title="Бонусный сертификат" src="/images/svg/present_bonus.svg">
         </div>
         <div class="presents__item presents__item--bonus">
-            <img title="Бесплатная доставка" src="/images/svg/shipment.svg">
+            <img title="Бесплатная доставка" src="/images/svg/shipment1.svg">
         </div>
         <div class="presents__discount">
             <div class="presents__discount-text">Ваша экономия</div>

@@ -52,6 +52,9 @@ $(document).ready(function () {
 
     $('#poll-post').on('submit', function (event) {
         event.preventDefault()
+        if ($('#poll-popup-button').hasClass('fenix-used')){
+            return;
+        }
         if (!checkPhone($('#poll-phone').val())) {
             let error_msg = 'Введите телефон в верном формате'
             showErrorMsg( $('#poll-phone'), error_msg)
@@ -66,6 +69,7 @@ $(document).ready(function () {
         data = JSON.stringify(data)
         poll.finished = true
         $('.poll__next-button').addClass('poll__next-button--transparent')
+        $('#poll-popup-button').addClass('fenix-used')
         sendMail('poll', {data})
     })
 })

@@ -261,7 +261,14 @@ i.popup-close {
     border-radius: 20px;
     margin-top: 40px;
     font-size: 17px;
+    cursor: pointer;
 }
+
+.fenix-used {
+    opacity: .5;
+    cursor: progress;
+}
+
 
 @media (max-width: 1080px){
 

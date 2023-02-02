@@ -1,37 +1,37 @@
-$(document).ready(
-    function () {
-        $(".order__items").on('click',
-            function (event) {
-                if (event.target.classList.contains('order__quan-inc')) {
+    $(document).ready(
+        function () {
+            $(".order__items").on('click',
+                function (event) {
+                    if (event.target.classList.contains('order__quan-inc')) {
+                        let parentDom = event.target.parentNode.parentNode;
+                        basket.addItem(
+                            parentDom.dataset.catalogId,
+                            parentDom.querySelector('.order__item-name').innerText,
+                            parseInt(parentDom.querySelector('.order__item-p').innerText.replace(/\D/g, '')),
+                            parseInt(parentDom.querySelector('.order__item-bp').innerText.replace(/\D+/g, '')),
+                            1,
+                            event.target.parentNode.parentNode.classList.contains('additional')
+                        )
+                    } else if (event.target.classList.contains('order__quan-dec')) {
+                        let parentDom = event.target.parentNode.parentNode;
+                        basket.removeItem(
+                            parentDom.dataset.catalogId,
+                            event.target.parentNode.parentNode.classList.contains('additional')
+                        )
+                    }
+                })
+            $(".order__items").on("change", ".order__quan-num",
+                function (event) {
                     let parentDom = event.target.parentNode.parentNode;
-                    basket.addItem(
+                    basket.setItem(
                         parentDom.dataset.catalogId,
                         parentDom.querySelector('.order__item-name').innerText,
-                        parseInt(parentDom.querySelector('.order__item-p').innerText.replace(/\D/g, '')),
+                        parseInt(parentDom.querySelector('.order__item-p').innerText.replace(/\D+/g, '')),
                         parseInt(parentDom.querySelector('.order__item-bp').innerText.replace(/\D+/g, '')),
-                        1,
+                        event.target.value,
                         event.target.parentNode.parentNode.classList.contains('additional')
                     )
-                } else if (event.target.classList.contains('order__quan-dec')) {
-                    let parentDom = event.target.parentNode.parentNode;
-                    basket.removeItem(
-                        parentDom.dataset.catalogId,
-                        event.target.parentNode.parentNode.classList.contains('additional')
-                    )
-                }
-            })
-        $(".order__items").on("change", ".order__quan-num",
-            function (event) {
-                let parentDom = event.target.parentNode.parentNode;
-                basket.setItem(
-                    parentDom.dataset.catalogId,
-                    parentDom.querySelector('.order__item-name').innerText,
-                    parseInt(parentDom.querySelector('.order__item-p').innerText.replace(/\D+/g, '')),
-                    parseInt(parentDom.querySelector('.order__item-bp').innerText.replace(/\D+/g, '')),
-                    event.target.value,
-                    event.target.parentNode.parentNode.classList.contains('additional')
-                )
-            })
+                })
 
         $('.order__action').on(
             'click', function (e) {

@@ -94,7 +94,7 @@ class DJPrices
         $arElements = array();
         $articles = array();
 
-        $elements = CIBlockElement::GetList(array(), ['IBLOCK_ID' => [8, 10, 11, 3]], false, false,
+        $elements = CIBlockElement::GetList(array(), ['IBLOCK_ID' => [8, 10, 11, 3, 13, 14, 24]], false, false,
             ['IBLOCK_ID', 'ID', 'NAME', "PROPERTY_ARTNUMBER"]);
 
         while ($arElement = $elements->fetch()) {

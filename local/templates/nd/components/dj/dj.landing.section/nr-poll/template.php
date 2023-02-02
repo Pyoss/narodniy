@@ -91,22 +91,18 @@
             <div class="poll__question-answers">
                 <div class="poll__question-answer" data-next-question="poll-finale">
                     <img src="/upload/src/present/present_gas.png" class="poll__question-answer-img">
-
                     <div class="poll__question-answer-text">Газовая</div>
                 </div>
                 <div class="poll__question-answer" data-next-question="poll-finale">
                     <img src="/upload/src/present/present_electric.png" class="poll__question-answer-img">
-
                     <div class="poll__question-answer-text">Электрическая</div>
                 </div>
                 <div class="poll__question-answer" data-next-question="poll-finale">
                     <img src="/upload/src/present/present_induct.png" class="poll__question-answer-img">
-
                     <div class="poll__question-answer-text">Индукционная</div>
                 </div>
                 <div class="poll__question-answer" data-next-question="poll-finale">
                     <img src="/upload/src/present/present_tan.png" class="poll__question-answer-img">
-
                     <div class="poll__question-answer-text">ТЭН</div>
                 </div>
             </div>
@@ -139,7 +135,7 @@
             <input class="poll__input" type="text"  placeholder="Имя:" id="poll-name">
             <input class="poll__input tel-mask" type="tel" required placeholder="Тел.:" id="poll-phone">
             <input class="poll__input" type="email"  placeholder="Email:" id="poll-email">
-            <button value="Отправить" class="poll__popup-button fenix__button">отправить</button>
+            <button value="Отправить" id="poll-popup-button" class="poll__popup-button fenix__button">отправить</button>
         </form>
     </div>
 </section>

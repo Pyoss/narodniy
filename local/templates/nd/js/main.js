@@ -35,12 +35,8 @@ $(document).ready(function () {
             showErrorMsg(phone_jq, error_msg)
             return
         }
-        let data = {
-            phone: phone_jq.val()
-        }
-        data = JSON.stringify(data)
         sendMail('callback',
-            {data}
+            {'phone': phone_jq.val()}
         )
     });
 
@@ -57,14 +53,8 @@ $(document).ready(function () {
             showErrorMsg(phone_jq, error_msg)
             return
         }
-        let data = {
-            phone: phone_jq.val(),
-            name: $('name-callback').val(),
-            email: $('email-callback').val()
-        }
-        data = JSON.stringify(data)
         sendMail('callback',
-            {data}
+            {phone: phone_jq.val(), name: $('name-callback').val(), email: $('email-callback').val()}
         )
     })
 
@@ -290,8 +280,6 @@ const basket = {
             })
     }
 }
-
-
 
 function showThanksPopup() {
     hide('all')

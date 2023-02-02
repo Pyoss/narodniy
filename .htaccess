@@ -30,3 +30,8 @@ ErrorDocument 404 /404.php
   ExpiresByType text/css "access plus 3 day"
   ExpiresByType application/javascript "access plus 3 day"  
 </IfModule>
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]

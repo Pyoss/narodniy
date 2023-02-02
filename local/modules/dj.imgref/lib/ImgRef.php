@@ -35,7 +35,6 @@ class ImgRef
             imageAlphaBlending($im, false);
             imageSaveAlpha($im, true);
 
-            // By default, the canvas is black, so make it transparent
             $mod = imagecolorallocatealpha($im, 0, 0, 0, 127);
         } else {
             $mod = imagecolorallocate($im, 255, 255, 255);
